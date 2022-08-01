@@ -2,14 +2,18 @@ body {
 	margin: 0;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 #bg__image_container {
-	background-image: url('./img/bg.jpg');
+	background-image: url('./img/bg_blue.jpg');
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center top;
+	background-position: center bottom;
 	background-size: cover;
 	z-index: -10;
 }
@@ -22,6 +26,7 @@ body {
 	padding-bottom: 10px;
 	display: flex;
 	justify-content: center;
+	border-bottom: 3px solid #EC6F98;
 }
 
 #header__title_container {
@@ -41,21 +46,65 @@ body {
 
 #header__title_container h1 {
 	color: #fcc65f;
-	font-size: 100px;
+	font-size: 60px;
 	font-weight: 400;
 	text-align: center;
-	margin: 10px;
+	margin: 10px 30px;
 	font-family: 'Major Mono Display', monospace;
 }
 
 #header__title_container > h1.heidelberg {
-	width: 100%;
+	/*width: 100%;*/
 }
 
 #header__title_container h1.hebt_ab {
-	font-size: 80px;
+	font-size: 60px;
 }
 
 #header__title_container h1.date {
-	font-size: 60px;
+	font-size: 40px;
+}
+
+#content {
+	position: absolute;
+	height: 2000px;
+	width: 100%;
+	padding-top: 300px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	font-family: 'Allerta Stencil', sans-serif;
+}
+
+.topic {
+	width: 60%;
+}
+
+@media (max-width: 1200px) {
+	.topic {
+		width: 80%;
+	}
+}
+
+@media (max-width: 600px) {
+	.topic {
+		width: 100%;
+	}
+}
+
+.topic > h4 {
+	border-top: 3px solid #EC6F98;
+	border-bottom: 3px solid #EC6F98;;
+	font-size: 40px;
+	padding: 5px 20px;
+	margin: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: #fcc65f;
+}
+
+.topic > div {
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius: 0px 0px 10px 10px;
+	padding: 5px 20px;
 }
